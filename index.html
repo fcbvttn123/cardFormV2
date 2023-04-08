@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="left-screen"></div>
+
+    <div class="right-screen">
+
+        <form class="" action="#" method="post">
+
+            <div class="input-group">
+
+                <label for="cardholder-name">CARDHOLDER NAME</label>
+                
+                <input class="" type="text" name="cardholder-name" id="cardholder-name" placeholder="e.g. Lionel Messi">
+
+                <p class="error hide" data-wrongFormat-error>Wrong format</p>
+                
+                <p class="error hide" data-blank-error>Can't be blank</p>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="card-number">CARD NUMBER</label>
+                
+                <input class="" type="text" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+
+                <p class="error hide" data-wrongFormat-error>Wrong format</p>
+                
+                <p class="error hide" data-blank-error>Can't be blank</p>
+
+            </div>
+
+            <div class="input-group input-group-expDate">
+
+                <label for="exp-month">EXP. DATE (MM/YY)</label>
+                
+                <input class="" type="text" name="exp-month" id="exp-month" data-exp-month id="exp-month" placeholder="MM">
+
+                <input class="" type="text" name="exp-year" id="exp-year" placeholder="YY">
+
+                <p class="error hide" data-wrongFormat-error>Wrong format</p>
+                
+                <p class="error hide" data-blank-error>Can't be blank</p>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="cvc">CVC</label>
+                
+                <input class="" type="text" name="cvc" id="cvc" placeholder="e.g. 123">
+
+                <p class="error hide" data-wrongFormat-error>Wrong format</p>
+                
+                <p class="error hide" data-blank-error>Can't be blank</p>
+
+            </div>
+
+            <button type="submit" data-submit-btn>Confirm</button>
+
+        </form>
+
+        <div class="form-submitted-successfully">
+
+            <img src="images/icon-complete.svg" alt="">
+
+            <h1>THANK YOU!</h1>
+
+            <p>We've added your card details</p>
+
+            <button type="submit" data-continue-btn>Continue</button>
+
+        </div>
+
+    </div>
+
+    <div class="card1">
+
+        <div class="card1-circles">
+
+            <div class="big-circle"></div>
+
+            <div class="small-circle"></div>
+
+        </div>
+
+        <p class="card1-number">0000 0000 0000 0000</p>
+
+        <div class="card1-info">
+
+            <p class="card1-info-name">Lionel Messi</p>
+
+            <p class="card1-info-expDate">00/00</p>
+
+        </div>
+
+    </div>
+
+    <div class="card2"></div>
+
+</body>
+</html>

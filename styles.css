@@ -1,0 +1,288 @@
+@import url("https://fonts.google.com/specimen/Space+Grotesk");
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --red-error: hsl(0, 100%, 66%);
+    --blue-color: hsl(249, 99%, 64%);
+    --violet-color: hsl(278, 94%, 30%);
+
+    --border-radius: .3rem;
+    --transition: all .3s;
+}
+
+body {
+    display: flex;
+}
+
+body label {
+    font-size: .67rem;
+    font-weight: 500;
+}
+
+body input {
+    border: 1px solid var(--dark-grayish-violet);
+    border-radius: var(--border-radius);
+    padding: .5rem .75rem;
+    transition: var(--transition);
+    width: 100%;
+}
+
+body input:hover {
+    border: 1px solid var(--violet-color);
+}
+
+body input.invalid {
+    border: 1px solid var(--red-error);
+}
+
+.error {
+    font-size: .65rem;
+    color: var(--red-error);
+}
+
+.left-screen {
+    flex-basis: 30%;
+    height: 100vh;
+
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-screen {
+    height: 100vh;
+    flex-basis: 70%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1rem;
+    position: absolute;
+    transition: all .3s;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+/* Expiration Date: start */
+
+.input-group-expDate {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: .75rem;
+}
+
+.input-group-expDate label, p {
+    flex-basis: 100%;
+}
+
+.input-group-expDate input {
+    flex-basis: 20%;
+}
+
+/* Expiration Date: end */
+
+button {
+    width: 100%;
+    background-color: black;
+    color: var(--white);
+    border-radius: var(--border-radius);
+    padding: .5rem .75rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+/* Card 1: start */
+
+.card1 {
+    position: absolute;
+    min-width: 30%;
+    min-height: 35%;
+    border-radius: var(--border-radius);
+    background-image: url(images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    top: 5rem;
+    left: 5rem;
+    padding: 1rem;
+
+    color: white;
+}
+
+.card1-circles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: .75rem;
+    width: 100%;
+}
+
+.card1-circles .big-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.card1-circles .small-circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.card1-number {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.card1-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 100;
+}
+
+/* Card 1: end */
+
+.card2 {
+    position: absolute;
+    min-width: 30%;
+    min-height: 35%;
+    border-radius: var(--border-radius);
+    background-image: url(images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    top: 17rem;
+    left: 10rem;
+}
+
+
+
+
+/* Notify form submitted successfully */
+
+.form-submitted-successfully {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    position: absolute;
+    transform: translateX(200%);
+    transition: all .3s;
+}
+
+.form-submitted-successfully h1 {
+    font-weight: 700;
+}
+
+.form-submitted-successfully p {
+    font-size: .75rem;
+    color: var(--dark-grayish-violet);
+}
+
+.form-submitted-successfully button {
+    margin-top: 2rem;
+    width: 300px;
+}
+
+.form-submitted-successfully.active {
+    transform: translateX(0);
+}
+
+
+
+
+/* Hide */
+
+.hide {
+    display: none;
+}
+
+.hide-form {
+    transform: translateY(600%);
+}
+
+
+
+
+@media (max-width:600px) {
+
+    body {
+        flex-wrap: wrap;
+    }
+
+    .left-screen {    
+        background-image: url(images/bg-main-mobile.png);
+        flex-basis: 100%;
+        height: 40vh;
+    } 
+    
+    .right-screen {
+        flex-basis: 100%;
+    } 
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 5rem;
+    }
+
+    .card1 {
+        width: 70vw;
+        min-height: 30vh;
+        left: 1rem;
+        z-index: 1;
+        top: 7rem;
+    }
+
+    .card2 {
+        width: 70vw;
+        min-height: 30vh;
+        left: 5rem;
+        top: 1rem;
+        z-index: 0;
+    }
+
+}
+
+
+
+
